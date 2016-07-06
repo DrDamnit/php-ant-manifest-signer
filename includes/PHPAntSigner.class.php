@@ -33,12 +33,12 @@ class PHPAntSigner
         $filePath = $this->appPath .'/app.php';
 
         if(!file_exists($this->appPath)) {
-            throw new Exception("Requested app ($appName) does not exist in includes/apps/", 1);
+            throw new \Exception("Requested app ($appName) does not exist in includes/apps/", 1);
             return false;
         }
 
         if(!file_exists($filePath)) {
-            throw new Exception("The requested app ($appName) does not have an app.php file as is required for a properly structured app. Failed to find $filePath.", 1);
+            throw new \Exception("The requested app ($appName) does not have an app.php file as is required for a properly structured app. Failed to find $filePath.", 1);
             return false;
             
         }
